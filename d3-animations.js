@@ -118,7 +118,7 @@ csv("data/data.csv")
     let positionEnX = 1;
     let nombremax = 0;
 
-    const createCig1992 = () => {
+    const createCig1992 = (isActive) => {
       svg.selectAll(".chart").remove();
       positionEnY = 0;
       positionEnX = 1;
@@ -142,6 +142,10 @@ csv("data/data.csv")
           .attr("y", positionEnY)
           .attr("width", 10)
           .attr("height", 50);
+
+        if (isActive && index >= nombremax - 23) {
+          lineChart.attr("fill", "#e1e1e1");
+        }
 
         if (positionEnX === 20) positionEnX = 0;
         if (index === 19) {
@@ -232,10 +236,10 @@ csv("data/data.csv")
     // various functions to update chart elements
 
     function doNombreStepUn() {
-      createCig1992();
+      createCig1992(false);
     }
     function reverseStepUn() {
-      createCig1992();
+      createCig1992(false);
 
       var xAxis = d3.axisBottom().scale(x);
       x.domain([0, 1000000]);
@@ -246,6 +250,22 @@ csv("data/data.csv")
         .transition()
         .duration(1000)
         .call(xAxis);
+    }
+
+    function createPitiBaton() {
+      svg
+        .append("g")
+        .lower()
+        .attr("class", "chart")
+        .append("rect")
+        .transition()
+        .duration(1000)
+        .attr("transform", `rotate(90)`)
+        .attr("fill", "#e1e1e1")
+        .attr("x", 200)
+        .attr("y", -533.2734) //nombreKm = ((600 / 10) * nb_km[0]/100000);
+        .attr("width", 10)
+        .attr("height", 533.2734);
     }
 
     function doKmStepDeux() {
@@ -522,7 +542,8 @@ csv("data/data.csv")
         .attr("x", 364.9)
         .attr("y", -650)
         .attr("width", 35.1)
-        .attr("height", 600);
+        .attr("height", 600)
+        .attr("fill", "black");
     }
 
     //--------------------//
@@ -530,10 +551,10 @@ csv("data/data.csv")
     let positionEnXToday = 1;
     let nombremaxToday = 0;
     function doNombreStepToday() {
-      createCig2017();
+      createCig1992(true);
     }
     function reverseNombreStepToday() {
-      createCig2017();
+      createCig1992(true);
       var yAxis = d3
         .axisLeft()
         .scale(y)
@@ -557,7 +578,8 @@ csv("data/data.csv")
         .attr("x", 200)
         .attr("y", -434.0080014) //nombreKm = ((600 / 10) * nb_km[0]/100000);
         .attr("width", 10)
-        .attr("height", 434.0080014);
+        .attr("height", 434.0080014)
+        .attr("fill", "black");
     }
     function reverseKMToday() {}
     function doPoidsStepToday() {
@@ -596,7 +618,8 @@ csv("data/data.csv")
         .selectAll(".poids-texteDeux")
         .transition()
         .duration(1000)
-        .style("opacity", 0);
+        .style("opacity", 0)
+       
 
       svg
         .selectAll(".chart rect")
@@ -622,7 +645,8 @@ csv("data/data.csv")
         .selectAll(".poids-texte")
         .transition()
         .duration(1000)
-        .style("opacity", 0);
+        .style("opacity", 0)
+        .attr("fill", "#e1e1e1");
 
       const svgCode =
         '<svg width="174" height="126" viewBox="0 0 174 126" fill="none" xmlns="http://www.w3.org/2000/svg">' +
@@ -903,9 +927,11 @@ scrollama magic happens here:
             reverseKMToday();
             reversePoidsToday();
             reverseStepTrois();
+            createPitiBaton();
             toggleAxesOpacity(true, false, 1);
           } else {
             doKMStepToday();
+            createPitiBaton();
             toggleAxesOpacity(true, false, 1);
           }
           break;
@@ -972,4 +998,3 @@ scrollama magic happens here:
     init();
   })
   .catch(function (error) {});
- 
