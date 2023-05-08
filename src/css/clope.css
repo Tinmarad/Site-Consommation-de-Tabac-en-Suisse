@@ -1,0 +1,51 @@
+.clope_cendre{
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 750px; /* Hauteur de l'image de fond */
+    background-image: url("/images/cendre.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 099999;
+}
+.clope_haut{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 750px; /* Hauteur de l'image de fond */
+  background-image: url("/images/clope_haut.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 9999;
+}
+
+
+  
+  .clope_bas{
+   
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 750px; /* Hauteur de l'image de fond */
+    background-image: url("/images/clope_bas.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 09999;
+
+  }
+  .mot{
+    position: fixed;
+    bottom: 5px;
+  right: 30px;
+    z-index: 09999;
+
+  }
+
+

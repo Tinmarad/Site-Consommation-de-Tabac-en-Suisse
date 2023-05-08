@@ -1,0 +1,230 @@
+/* CSS reset */
+a,abbr,acronym,address,applet,big,blockquote,body,caption,cite,code,dd,del,dfn,div,dl,dt,fieldset,font,form,h1,h2,h3,h4,h5,h6,html,iframe,img,ins,kbd,label,legend,li,object,ol,p,pre,q,s,samp,small,span,strike,sub,sup,table,tbody,td,tfoot,th,thead,tr,tt,ul,var{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit}:focus{outline:0}body{line-height:1;color:#000;background:#fff}ol,ul{list-style:none}table{border-collapse:separate;border-spacing:0}caption,td,th{text-align:left;font-weight:400}blockquote:after,blockquote:before,q:after,q:before{content:""}blockquote,q{quotes:"" ""}.alignleft{float:left}.alignright{float:right}.clear{clear:both}
+
+/* CSS */
+
+html{
+    scroll-behavior: smooth;
+ 
+   
+}
+body{
+    color: black;
+    line-height: 1.3em; 
+    overflow-x: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    cursor: url('/images/drapeau_suisse.png'), auto;
+}
+@font-face {
+    font-family: 'titre';
+    src: url('/typography/helvetica/HelveticaNeueLTPro-Md.otf') format('woff2');
+  }
+
+  /* .block{
+    position: absolute;
+    top :0px;
+    left : 0px;
+    background-color: red;
+    height: 100%;
+    width: 100%;
+  } */
+
+#scrolly {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+  
+}
+
+article {
+    position: relative;
+    padding: 0;
+    z-index: 0;
+}
+
+section.introduction{
+    width: 60%;
+    padding: 50px;
+    margin: 0 auto;
+    height: 100%;
+
+}
+
+
+figure {
+    position: -webkit-sticky;
+    position: sticky;
+    right: 0;
+    width: 1000px;
+    margin: 0 auto;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    z-index: 10;
+}
+#avicii_viz{
+    /* background-color: salmon; */
+    width: 750px;
+    float: right;
+    /* box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.4); */
+    
+   
+}
+
+
+
+.step {
+    margin: 25px 0;
+    padding: 10px;
+
+
+}
+
+.step:last-child {
+    margin-bottom: 0;
+}
+
+    
+
+
+
+ul{
+    margin-bottom: 25px;
+}
+ul li{
+    list-style: disc;
+    padding-left: 15px;
+    margin-left: 15px;
+    margin-left: 15px;
+}
+.step p{
+    font-size: .9em;
+  
+}
+
+p.seperator{
+    text-align: center;
+    font-weight: 700;
+    font-size: 1em;
+    margin: 50px 0;
+   
+   }
+p span.label{
+    font-weight: 700;
+    
+}
+
+.red{
+    color: #A6055D;
+}
+.grey{
+    color: #777;
+}
+.green{
+    color: #00C184;
+}
+
+.tooltip{
+    margin: 0 auto;
+    color: #01080D;
+    position: absolute;
+    bottom: -35px;
+    right: 20px;
+    width: 500px;
+    text-align: right;
+    font-size: .8em;
+    font-weight: 700;
+    
+}
+
+
+a{
+    font-weight: 700;
+    color: #F14F54;
+    
+}
+#language a{
+    color: #F2E8DC;
+}
+#language a.active{
+    opacity: .5;
+}
+
+
+#camion {
+  position: absolute;    
+    top:150px;
+    left: 550px;
+    width: 100%;
+    height: 100%;
+
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: black;
+    
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  #white-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 99999999;
+  }
+
+
+  .container {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  .text {
+    font-weight: 100;
+    font-size: 28px;
+    color: #000000;
+  }
+  .dud {
+    color: #000000;
+  }
+
+
+#cursor{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  transition: 0.1s;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  cursor: none;
+}
+h2:hover ~ #cursor{
+  width: 100px;
+  height: 100px;
+  background-color: #cecece;
+  border: 2px solid #1C1C1C;
+  opacity: 0.5;
+}
+::selection {
+  color: #cecece;
+  background: #1C1C1C;
+}
