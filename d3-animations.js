@@ -147,7 +147,7 @@ csv("/data.csv")
           .attr("height", 50);
 
         if (isActive && index >= nombremax - 23) {
-          lineChart.attr("fill", "#e1e1e1");
+          lineChart.attr("fill", "#bfbfbf");
         }
 
         if (positionEnX === 20) positionEnX = 0;
@@ -264,7 +264,7 @@ csv("/data.csv")
         .transition()
         .duration(1000)
         .attr("transform", `rotate(90)`)
-        .attr("fill", "#e1e1e1")
+        .attr("fill", "#bfbfbf")
         .attr("x", 200)
         .attr("y", -533.2734) //nombreKm = ((600 / 10) * nb_km[0]/100000);
         .attr("width", 10)
@@ -648,7 +648,7 @@ csv("/data.csv")
         .transition()
         .duration(1000)
         .style("opacity", 0)
-        .attr("fill", "#e1e1e1");
+        .attr("fill", "#bfbfbf");
 
       const svgCode =
         '<svg width="174" height="126" viewBox="0 0 174 126" fill="none" xmlns="http://www.w3.org/2000/svg">' +
