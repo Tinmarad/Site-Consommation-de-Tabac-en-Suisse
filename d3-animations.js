@@ -947,7 +947,7 @@ scrollama magic happens here:
             toggleAxesOpacity(true, true, 0);
             functionTexte();
             doPoidsStepTrois();
-            svg.select(".poids-texte").attr("fill", "#e8e8e8");
+            svg.select(".poids-texte").attr("fill", "#bfbfbf");
           }
 
           break;
