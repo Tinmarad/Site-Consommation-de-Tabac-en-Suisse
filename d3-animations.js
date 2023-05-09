@@ -1,6 +1,6 @@
 import { index, reverse } from "d3";
 import { csv } from "d3-fetch";
-csv("data/data.csv")
+csv("./data/data.csv")
   .then(function (dataCigarettes) {
     // set the dimensions and margins of the graph
     const margin = { top: 0, right: 0, bottom: 0, left: 50 },
