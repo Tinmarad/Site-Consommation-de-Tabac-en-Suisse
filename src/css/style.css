@@ -4,17 +4,16 @@ a,abbr,acronym,address,applet,big,blockquote,body,caption,cite,code,dd,del,dfn,d
 /* CSS */
 
 html{
-    scroll-behavior: smooth;
- 
-   
+  scroll-behavior: smooth;
 }
 body{
+  scroll-behavior: smooth;
     color: black;
     line-height: 1.3em; 
     overflow-x: hidden;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-    cursor: url('/images/drapeau_suisse.png'), auto;
+    
 }
 @font-face {
     font-family: 'titre';
@@ -31,6 +30,7 @@ body{
   } */
 
 #scrolly {
+  scroll-behavior: smooth;
     width: 1100px;
     margin: 0 auto;
     position: relative;
@@ -38,9 +38,11 @@ body{
 }
 
 article {
+  scroll-behavior: smooth;
     position: relative;
     padding: 0;
     z-index: 0;
+   
 }
 
 section.introduction{
@@ -48,11 +50,12 @@ section.introduction{
     padding: 50px;
     margin: 0 auto;
     height: 100%;
-
+    scroll-behavior: smooth;
 }
 
 
 figure {
+  scroll-behavior: smooth;
     position: -webkit-sticky;
     position: sticky;
     right: 0;
@@ -64,6 +67,7 @@ figure {
     z-index: 10;
 }
 #avicii_viz{
+  scroll-behavior: smooth;
     /* background-color: salmon; */
     width: 750px;
     float: right;
@@ -247,4 +251,23 @@ h2:hover ~ #cursor{
   height: 9px;
   border: #000 1px solid ;
   background-color: #e1e1e1; /* Changez la couleur de fond selon vos besoins */
+}
+
+.top{
+  position: fixed;
+  bottom: 60px;
+  right: 35px;
+  width: 80px;
+  height: 80px;
+  background-image: url("/images/bouton_to_the_top1_1.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 9999;
+  transition: background-image 0.6s ease-out 10ms
+}
+
+.top:hover{
+  background-image: url("/images/boutonHover.svg");
+
 }

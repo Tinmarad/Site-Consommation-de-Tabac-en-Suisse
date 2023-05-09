@@ -1,10 +1,6 @@
 window.addEventListener("load", function () {
   document.body.style.opacity = 1;
 });
-window.onload = function () {
-  document.body.scrollTop = 0; // Pour les navigateurs qui prennent en charge la propriété scrollTop
-  document.documentElement.scrollTop = 0; // Pour les navigateurs qui prennent en charge la propriété scrollTop pour l'élément racine (html)
-};
 
 class TextScramble {
   constructor(el) {
@@ -68,7 +64,7 @@ const phrases = [
   "Fumer",
   "Smoke",
   "Cendre",
-  'Inhalation',
+  "Inhalation",
 ];
 
 const el = document.querySelector(".mot");
@@ -83,6 +79,3 @@ const next = () => {
 };
 
 next();
-
-
-

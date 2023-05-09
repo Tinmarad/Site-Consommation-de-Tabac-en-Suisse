@@ -327,7 +327,7 @@ csv("data/data.csv")
 
     function doPoidsStepTrois() {
       svg
-        .selectAll(".poids-texte")
+        .select(".poids-texte")
         .transition()
         .duration(1000)
         .style("opacity", 1);
@@ -618,8 +618,7 @@ csv("data/data.csv")
         .selectAll(".poids-texteDeux")
         .transition()
         .duration(1000)
-        .style("opacity", 0)
-       
+        .style("opacity", 0);
 
       svg
         .selectAll(".chart rect")
@@ -892,12 +891,14 @@ scrollama magic happens here:
             toggleAxesOpacity(false, true, 0);
           } else {
             doPoidsStepTrois();
+
             toggleAxesOpacity(true, false, 0);
           }
           break;
         case 3:
           if (currentDirection === "up") {
             toggleAxesOpacity(false, false, 0);
+            svg.select(".poids-texte").attr("fill", "black");
             reverseStepLoi();
           } else {
             doLoiTabac();
@@ -944,6 +945,7 @@ scrollama magic happens here:
             toggleAxesOpacity(true, true, 0);
             functionTexte();
             doPoidsStepTrois();
+            svg.select(".poids-texte").attr("fill", "#e8e8e8");
           }
 
           break;
@@ -955,13 +957,6 @@ scrollama magic happens here:
             toggleAxesOpacity(true, true, 0);
           }
           break;
-        case 9:
-
-        case 10:
-          if (currentDirection === "down") {
-            toggleElementOpacity(line, 0);
-            toggleElementOpacity(bubbleChart, 0);
-          }
         default:
           break;
       }
