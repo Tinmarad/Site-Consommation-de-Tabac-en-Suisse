@@ -1,7 +1,9 @@
 import { index, reverse } from "d3";
 import { csv } from "d3-fetch";
+import scrollama from "scrollama";
+import * as d3 from "d3";
 
-csv("./data.csv")
+csv("/data.csv")
   .then(function (dataCigarettes) {
     // set the dimensions and margins of the graph
     const margin = { top: 0, right: 0, bottom: 0, left: 50 },
@@ -941,7 +943,6 @@ scrollama magic happens here:
           if (currentDirection === "up") {
             toggleAxesOpacity(true, false, 1);
             doPoidsStepTrois();
-            reversePoidsStepToday();
           } else {
             toggleAxesOpacity(true, true, 0);
             functionTexte();
