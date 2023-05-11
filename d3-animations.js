@@ -458,9 +458,9 @@ csv("/data.csv")
         .transition()
         .duration(1000)
         .attr("x", 247.1)
-        .attr("y", -650)
+        .attr("y", -200)
         .attr("width", 152.1)
-        .attr("height", 600);
+        .attr("height", 150);
 
       //-----------------------------------------//
 
@@ -505,9 +505,9 @@ csv("/data.csv")
         .transition()
         .duration(1000)
         .attr("x", 247.1)
-        .attr("y", -650)
+        .attr("y", -200)
         .attr("width", 152.1)
-        .attr("height", 600);
+        .attr("height", 150);
     }
 
     function doLoiTabacDeux() {
@@ -519,9 +519,9 @@ csv("/data.csv")
         .duration(1000)
         .attr("transform", `rotate(90)`)
         .attr("x", 364.9)
-        .attr("y", -650)
+        .attr("y", -200)
         .attr("width", 35.1)
-        .attr("height", 600);
+        .attr("height", 150);
     }
     function reverseLoiTabacDeux() {
       var yAxis = d3
@@ -543,9 +543,9 @@ csv("/data.csv")
         .duration(1000)
         .attr("transform", `rotate(90)`)
         .attr("x", 364.9)
-        .attr("y", -650)
+        .attr("y", -200)
         .attr("width", 35.1)
-        .attr("height", 600)
+        .attr("height", 150)
         .attr("fill", "black");
     }
 
